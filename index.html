@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Volcano Bay - Dimsum Mentai Simalungun</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#home" class="brand">
+        <img src="assets/hero-dimsum.jpg" alt="Logo The Volcano Bay" class="brand-logo" style="object-fit: cover;">
+        <span>The Volcano Bay</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" onclick="tutupNav()">Home</a>
+        <a href="#tentang" onclick="tutupNav()">Tentang</a>
+        <a href="#menu" onclick="tutupNav()">Menu</a>
+        <a href="#kontak" onclick="tutupNav()">Kontak</a>
+      </nav>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="badge-pill">🔥 UMKM KULINER SIMALUNGUN</span>
+        <h1>Dimsum Mentai Lumer, <span class="highlight">Nikmat di Setiap Gigitan.</span></h1>
+        <p>Sajian dimsum ayam lembut dengan siraman saus mentai racikan spesial yang dibakar smoky. Dibuat fresh setiap hari, higienis, dan 100% halal.</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">Lihat Menu & Harga ↓</a>
+          <a href="#tentang" class="btn btn-outline">Tentang Kami</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <strong>12 Varian</strong>
+            <span>Pilihan Menu</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Halal & Fresh</span>
+          </div>
+          <div>
+            <strong>UMKM</strong>
+            <span>Bandar Huluan</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-circle">
+          <img src="assets/bestt-dimsum.jpg" alt="Dimsum Mentai">
+        </div>
+        <div class="floating-badge">
+          <span>⭐ Favorit Pelanggan</span>
+          <small>Saus Mentai Melimpah</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">✨</div>
+        <h3>Higienis & Halal</h3>
+        <p>Diolah secara bersih setiap hari dengan bahan baku terjamin kehalalannya.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔥</div>
+        <h3>Saus Mentai Smoky</h3>
+        <p>Takaran saus melimpah yang di-torch langsung untuk aroma bakaran menggoda.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💸</div>
+        <h3>Ramah di Kantong</h3>
+        <p>Kualitas rasa premium dengan harga bersahabat untuk semua kalangan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tentang" class="about">
+    <div class="container about-grid">
+      <div class="about-image">
+        <img src="assets/kedai.jpg" alt="Kedai The Volcano Bay">
+      </div>
+      <div class="about-text">
+        <span class="section-tag">TENTANG KEDAI KAMI</span>
+        <h2>Mengenal The Volcano Bay</h2>
+        <p><strong>The Volcano Bay</strong> adalah usaha kuliner lokal UMKM di Kabupaten Simalungun yang menghadirkan sajian Dimsum Mentai berkualitas dengan cita rasa autentik.</p>
+        <p>Setiap porsi disiapkan hangat sesuai pesanan dengan beragam pilihan topping mulai dari Original, Nori, Keju, Mozzarella, Tobiko, Salted Egg, hingga Varian Pedas Lava.</p>
+        <a href="#menu" class="btn-link">Pilih Varian Favoritmu →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">DAFTAR MENU & HARGA</span>
+        <h2>Pilihan Varian Dimsum Mentai</h2>
+        <p>Atur jumlah porsi yang diinginkan lalu klik tombol pesan untuk langsung terhubung ke WhatsApp.</p>
+      </div>
+
+      <div class="filter-tabs" id="filterTabs">
+        <button type="button" class="filter-btn active" onclick="filterKategori('all', this)">Semua (12)</button>
+        <button type="button" class="filter-btn" onclick="filterKategori('volcano', this)">Volcano Series</button>
+        <button type="button" class="filter-btn" onclick="filterKategori('spesial', this)">Spesial & Paket</button>
+        <button type="button" class="filter-btn" onclick="filterKategori('minuman', this)">Minuman</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <span class="cta-mini">🌋 LAGI LAPAR ATAU PENGEN NGEMIL?</span>
+        <h2>Yuk, Temukan Varian Mentai Favoritmu!</h2>
+        <p>Pesan sekarang untuk menemani waktu santai bersama keluarga dan teman di Simalungun.</p>
+        <a href="https://wa.me" target="_blank" rel="noopener noreferrer" class="btn btn-white">Pesan via WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">HUBUNGI KAMI</span>
+        <h2>Informasi Kedai & Media Sosial</h2>
+        <p>Ingin memesan, tanya stok, atau kepoin promo terbaru? Ikuti dan hubungi kami di sini!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">💬</div>
+          <h3>WhatsApp Pemesanan</h3>
+          <p>Respon cepat untuk pemesanan langsung maupun tanya-tanya menu.</p>
+          <a href="https://wa.me" target="_blank" rel="noopener noreferrer" class="contact-link">
+            Chat WhatsApp →
+          </a>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">📱</div>
+          <h3>Media Sosial Resmi</h3>
+          <p>Cek video review, testimoni pelanggan, dan info buka lapak harian kami.</p>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="contact-link">
+            Kunjungi Instagram →
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">⏰</div>
+          <h3>Jam Operasional</h3>
+          <p>Buka setiap hari menyajikan dimsum hangat dan saus mentai segar.</p>
+          <strong class="contact-highlight">Senin - Minggu: 11.00 - 21.00 WIB</strong>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <h3>Lokasi Kedai</h3>
+          <p>Jl. Letda Sujono, Simpang Mangga, Naga Jaya 1, Kec. Bandar Huluan, Kab. Simalungun, Sumatera Utara 21193.</p>
+          <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="contact-link">Lihat di Google Maps →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 <strong>The Volcano Bay</strong> - UMKM Dimsum Mentai Kabupaten Simalungun.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me" target="_blank" rel="noopener noreferrer">WhatsApp</a> •
+        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a> •
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me,%20saya%20mau%20pesan" target="_blank" rel="noopener noreferrer" class="wa-float" title="Chat WhatsApp">💬</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
